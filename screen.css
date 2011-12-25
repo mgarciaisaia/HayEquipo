@@ -1,0 +1,62 @@
+/* Header styles */
+#header {
+	clear:both;
+	float:left;
+	width:100%;
+	border-bottom:1px solid #000;
+}
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;			/* width of page */
+	position:relative;
+}
+.colleft div {
+	width: 28%;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+	overflow:hidden;
+}
+/* 3 Column settings */
+.threecol .colmid {
+	right:25%;			/* width of the right column */
+}
+.threecol .colleft {
+	right:50%;			/* width of the middle column */
+}
+.threecol .col1 {
+	left:109%;			/* 100% plus left padding of center column */
+}
+.threecol .col2 {
+	left:42%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.threecol .col3 {
+	left:77%;			/* Please make note of the brackets here:
+					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+}
+/* Footer styles */
+#footer {
+	clear:both;
+	float:left;
+}
+
+.box {
+	border: 5px dashed black;
+	padding: 1%;
+	margin: 1%;
+}
