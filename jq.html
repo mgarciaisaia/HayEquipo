@@ -4,57 +4,31 @@
 	<title>The Perfect 3 Column Liquid Layout: No CSS hacks. SEO friendly. iPhone compatible.</title>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
 	<link type="text/css" href="jquery/css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+	<link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
 	<script type="text/javascript" src="jquery/js/jquery-1.6.2.min.js"></script>
 	<script type="text/javascript" src="jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
 	<style>
-	ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
-	li { margin: 5px; padding: 5px; width: 150px; }
-	</style>
-	<script>
-	/*$(function() {
-		$( "#sortable" ).sortable({
-			revert: true
-		});
-		$( "#draggable" ).draggable({
-			connectToSortable: "#sortable",
-			helper: "clone",
-			revert: "invalid"
-		});
-		$( "ul, li" ).disableSelection();
-	});*/
-	</script>
-	<style>
 	.draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
 	.ui-widget-header p, .ui-widget-content p { margin: 0; }
-	#snaptarget { height: 140px; }
+	#snaptarget, #snaptarget2, #snaptarget3 { height: 140px; width: 100%;}
+	#footer { height: 200px; }
 	</style>
 	<script>
-	/*$('li').each(function(index) {
-	    alert(index + ': ' + $(this).text());
-	});*/
-	
-	$.each($('li'), function() {
-		alert(this);
-	      //$("#" + this).text("Mine is " + this + ".");
-	       //return (this != "three"); // will stop running after "three"
-	   });
+	$(function() {
+		$( "#draggable" ).draggable({ revert: "invalid" });
+		$( ".targeteable" ).droppable({
+			activeClass: "ui-state-hover",
+			hoverClass: "ui-state-active",
+			drop: function( event, ui ) {
+				$( this )
+					.addClass( "ui-state-highlight" );
+			}
+		});
 
-	
-	/*$.each($('li'), function(index, value) { 
-		alert(value);
-		$(value).draggable({ snap: ".box" });
-	});*/
-
-
-	/*$(function() {
-		$( "#draggable" ).draggable({ snap: true });
-		$( "#draggable3" ).draggable({ snap: ".ui-widget-header", snapMode: "outer" });
-		$( "#draggable4" ).draggable({ grid: [ 20,20 ] });
-		$( "#draggable5" ).draggable({ grid: [ 80, 80 ] });
-	});*/
+	});
 	</script>
+
 
 </head>
 <body>
@@ -63,19 +37,32 @@
 <div class="colmask threecol">
 	<div class="colmid">
 		<div class="colleft">
+
+			
+
+
+
 			<div class="col1 box">
+			<div id="snaptarget" class="ui-widget-header targeteable">
+				<p>I'm a snap target</p>
+			</div>
 				<!-- Column 1 start -->
 				COLUMNA 1
 				Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
 				<!-- Column 1 end -->
 			</div>
 			<div class="col2 box">
+			<div id="snaptarget2" class="ui-widget-header targeteable">
+				<p>I'm a snap target</p>
+			</div>
 				<!-- Column 2 start -->
 				COLUMNA 2
 				Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
 				<!-- Column 2 end -->
 			</div>
 			<div class="col3 box">
+			<div id="snaptarget3" class="ui-widget-header targeteable">
+			</div>
 				<!-- Column 3 start -->
 				COLUMNA 3
 				Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
@@ -84,13 +71,11 @@
 		</div>
 	</div>
 </div>
-<div id="footer" class="box">
-	<ul id="sortable">
-		<li class="ui-state-default">Choni</li>
-		<li class="ui-state-default">Melvin</li>
-		<li class="ui-state-default">Largo</li>
-		<li class="ui-state-default">Rey</li>
-	</ul>
+				<div id="draggable" class="draggable ui-widget-content">
+					<p>Chonee</p>
+				</div>
+<div id="footer" class="box targeteable">
+	
 </div>
 </body>
 </html>
