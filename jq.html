@@ -1,81 +1,64 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
-<head>
-	<title>The Perfect 3 Column Liquid Layout: No CSS hacks. SEO friendly. iPhone compatible.</title>
-	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link type="text/css" href="jquery/css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
-	<link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
-	<script type="text/javascript" src="jquery/js/jquery-1.6.2.min.js"></script>
-	<script type="text/javascript" src="jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
-	<style>
-	.draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
-	.ui-widget-header p, .ui-widget-content p { margin: 0; }
-	#snaptarget, #snaptarget2, #snaptarget3 { height: 140px; width: 100%;}
-	#footer { height: 200px; }
-	</style>
-	<script>
-	$(function() {
-		$( "#draggable" ).draggable({ revert: "invalid" });
-		$( ".targeteable" ).droppable({
-			activeClass: "ui-state-hover",
-			hoverClass: "ui-state-active",
-			drop: function( event, ui ) {
-				$( this )
-					.addClass( "ui-state-highlight" );
-			}
-		});
+    <head>
+    	<title>The Perfect 3 Column Liquid Layout: No CSS hacks. SEO friendly. iPhone compatible.</title>
+    	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    	<link type="text/css" href="jquery/css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    	<link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
+    	<script type="text/javascript" src="jquery/js/jquery-1.6.2.min.js"></script>
+    	<script type="text/javascript" src="jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
+    	<style>
+    	.draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
+    	.ui-widget-header p, .ui-widget-content p { margin: 0; }
+    	#snaptarget, #snaptarget2, #snaptarget3 { height: 140px; width: 100%;}
+    	#footer { height: 200px; }
+    	</style>
+    	<script>
+    	$(function() {
+    		$( ".draggable" ).draggable({ revert: "invalid" });
+    		$( ".targeteable" ).droppable({
+    			activeClass: "ui-state-hover",
+    			hoverClass: "ui-state-active",
+    			drop: function( event, ui ) {
+    				$( this )
+    					.addClass( "ui-state-highlight" );
+    			}
+    		});
 
-	});
-	</script>
+    	});
+    	</script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="colmask threecol">
+            	<div class="colmid">
+            		<div class="colleft">
+            			<div class="col1 box">
+            			<div id="snaptarget" class="ui-widget-header targeteable">
+            				<p>I'm a snap target</p>
+            			</div>
+            		</div>
+            		<div class="col2 box">
+            			<div id="snaptarget2" class="ui-widget-header targeteable">
+            				<p>I'm a snap target</p>
+            			</div>
+            		</div>
+            		<div class="col3 box">
+            			<div id="snaptarget3" class="ui-widget-header targeteable">
+            			</div>
+            		</div>
+        		</div>
+        	</div>
+        </div>
 
-
-</head>
-<body>
-
-<div id="header">
-<div class="colmask threecol">
-	<div class="colmid">
-		<div class="colleft">
-
-			
-
-
-
-			<div class="col1 box">
-			<div id="snaptarget" class="ui-widget-header targeteable">
-				<p>I'm a snap target</p>
-			</div>
-				<!-- Column 1 start -->
-				COLUMNA 1
-				Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
-				<!-- Column 1 end -->
-			</div>
-			<div class="col2 box">
-			<div id="snaptarget2" class="ui-widget-header targeteable">
-				<p>I'm a snap target</p>
-			</div>
-				<!-- Column 2 start -->
-				COLUMNA 2
-				Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
-				<!-- Column 2 end -->
-			</div>
-			<div class="col3 box">
-			<div id="snaptarget3" class="ui-widget-header targeteable">
-			</div>
-				<!-- Column 3 start -->
-				COLUMNA 3
-				Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
-				<!-- Column 3 end -->
-			</div>
-		</div>
-	</div>
-</div>
-				<div id="draggable" class="draggable ui-widget-content">
-					<p>Chonee</p>
-				</div>
-<div id="footer" class="box targeteable">
-	
-</div>
-</body>
+        <div id="footer" class="box targeteable">
+            <div class="draggable ui-widget-content">
+            	<p>Chonee</p>
+        	</div>
+            <div class="draggable ui-widget-content">
+                <p>Chichoooooo</p>
+        	</div>
+        </div>
+    </body>
 </html>

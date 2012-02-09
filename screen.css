@@ -61,3 +61,7 @@
 	padding: 1%;
 	margin: 1%;
 }
+
+.colmask .col1, .colmask .col2, .colmask .col3 {
+    width: 300px;
+}
